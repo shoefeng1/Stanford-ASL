@@ -17,7 +17,7 @@ from sklearn.model_selection import train_test_split
 from amod import AMOD
 from bb_class import BB_node
 from bb_class import BB
-import datacollector as dc
+import data_collector as dc
 
 
 def number_od_pair(amod_prob, pair):
