@@ -97,6 +97,7 @@ class Network(nn.Module):
     return loss
 
 
+# Replace this with your own custom road network. Make sure to update make_train_test.py as well with your road network.
 new_roads = nx.Graph()
 for k in range(18):
   new_roads.add_node(k)
