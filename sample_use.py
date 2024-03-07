@@ -19,7 +19,7 @@ from amod import AMOD
 from bb_class import BB_node
 from bb_class import BB
 import data_collector as dc
-import newg_data_collect as nc
+import make_train_test as mtt
 
 class Network(nn.Module):
   def __init__(self, L1, L2, lr, epochs):
@@ -161,9 +161,9 @@ combo_tel_after = sum([nroads_NN.loss(te_inp[k], te_outp[k])
 
 
 
-random_reqs = nc.generate_req_sets(nroads_amod, 10, 30)
+random_reqs = mtt.generate_req_sets(nroads_amod, 10, 30)
 #     make reqs into input tensors
-input_tensors = nc.input_matrices(nroads_amod, random_reqs)
+input_tensors = mtt.input_matrices(nroads_amod, random_reqs)
 
 nn_node_counts = []
 avg_all_node_counts = []
