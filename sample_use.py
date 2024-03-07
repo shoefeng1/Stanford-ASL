@@ -133,16 +133,16 @@ capacities[(2, 7)] = 10
 nroads_amod = AMOD(new_roads, new_requests, capacities)
 
 
-tr_inp_df = pd.read_csv("train-test-data/arr_tr_in.csv").reset_index()
+tr_inp_df = pd.read_csv('/train-test-data/arr_tr_in.csv').reset_index()
 tr_inp = [torch.Tensor(row) for index, row in tr_inp_df.drop(tr_inp_df.columns[[0, 1]], axis=1).iterrows()]
 
-tr_outp_df = pd.read_csv("train-test-data/arr_tr_out.csv").reset_index()
+tr_outp_df = pd.read_csv('/train-test-data/arr_tr_out.csv').reset_index()
 tr_outp = [torch.Tensor(row) for index, row in tr_outp_df.drop(tr_outp_df.columns[[0, 1]], axis=1).iterrows()]
 
-te_inp_df = pd.read_csv("train-test-data/arr_te_in.csv").reset_index()
+te_inp_df = pd.read_csv('/train-test-data/arr_te_in.csv').reset_index()
 te_inp = [torch.Tensor(row) for index, row in te_inp_df.drop(te_inp_df.columns[[0, 1]], axis=1).iterrows()]
 
-te_outp_df = pd.read_csv("train-test-data/arr_te_out.csv").reset_index()
+te_outp_df = pd.read_csv('/train-test-data/arr_te_out.csv').reset_index()
 te_outp = [torch.Tensor(row) for index, row in te_outp_df.drop(te_outp_df.columns[[0, 1]], axis=1).iterrows()]
 
 
